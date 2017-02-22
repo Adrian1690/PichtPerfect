@@ -61,7 +61,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        
         if flag {
             performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url) // redirect to other view
         }else{
@@ -73,7 +72,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         if segue.identifier == "stopRecording"{
             let playSoundsVC = segue.destination as! PlaySoundsViewController // GET VIEW CONTROLLER
             let recordedAudioURL = sender as! URL // GET URL
-            playSoundsVC.recordedAudioUrl = recordedAudioURL //SET URL TO VARIABLE IN playSoundsViewController
+            playSoundsVC.recordedAudioURL = recordedAudioURL //SET URL TO VARIABLE IN playSoundsViewController
         }
     }
 }

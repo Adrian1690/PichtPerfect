@@ -34,7 +34,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         recordingButton.isEnabled = false
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
-        let recordingName = "recordedVoice.wav"
+        let recordingName = "mimimi.wav"
         let pathArray = [dirPath, recordingName]
         let filePath = URL(string: pathArray.joined(separator: "/"))
         
@@ -63,6 +63,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag {
+            print(audioRecorder.url)
             performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url) // redirect to other view
         }else{
             print("Recording was not successfully")

@@ -22,35 +22,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tab to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxL-h3-qeR">
-                                <rect key="frame" x="136.5" y="427" width="102.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTS-0M-IyW">
-                                <rect key="frame" x="110" y="256" width="155" height="155"/>
-                                <state key="normal" image="RecordButton"/>
-                                <connections>
-                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4u1-1l-Tdb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaW-xN-UrF">
-                                <rect key="frame" x="109.5" y="456" width="155" height="155"/>
-                                <state key="normal" image="Stop"/>
-                                <connections>
-                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N8D-I7-2GN"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IbB-yc-VpL">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfc-UA-S1J">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="301.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r2o-I5-am6">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="301.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTS-0M-IyW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="281"/>
+                                                        <state key="normal" image="RecordButton"/>
+                                                        <connections>
+                                                            <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4u1-1l-Tdb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tab to record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxL-h3-qeR">
+                                                        <rect key="frame" x="0.0" y="281" width="343" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SkZ-JN-iY9">
+                                        <rect key="frame" x="0.0" y="301.5" width="343" height="301.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaW-xN-UrF">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="301.5"/>
+                                                <state key="normal" image="Stop"/>
+                                                <connections>
+                                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N8D-I7-2GN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qaW-xN-UrF" firstAttribute="centerX" secondItem="MxL-h3-qeR" secondAttribute="centerX" id="ZqJ-x3-KkZ"/>
-                            <constraint firstItem="MxL-h3-qeR" firstAttribute="top" secondItem="dTS-0M-IyW" secondAttribute="bottom" constant="16" id="bJN-Ya-1Ac"/>
-                            <constraint firstItem="qaW-xN-UrF" firstAttribute="top" secondItem="MxL-h3-qeR" secondAttribute="bottom" constant="8" id="crV-gI-8yD"/>
-                            <constraint firstItem="MxL-h3-qeR" firstAttribute="centerX" secondItem="dTS-0M-IyW" secondAttribute="centerX" id="eJg-aa-7xE"/>
-                            <constraint firstItem="dTS-0M-IyW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ncW-G0-zCb"/>
-                            <constraint firstItem="dTS-0M-IyW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qaO-YD-foi"/>
+                            <constraint firstItem="IbB-yc-VpL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6ZF-uJ-L4L"/>
+                            <constraint firstItem="IbB-yc-VpL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cPf-qn-91k"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IbB-yc-VpL" secondAttribute="bottom" id="eHt-Ra-Ik9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IbB-yc-VpL" secondAttribute="trailing" id="mQp-2F-12G"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jLk-UP-n29"/>

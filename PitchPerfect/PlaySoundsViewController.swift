@@ -20,6 +20,7 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     
     var recordedAudioURL: URL!
+    var recordTime: String!
     
     var audioFile: AVAudioFile!
     var audioEngine: AVAudioEngine!
@@ -55,7 +56,7 @@ class PlaySoundsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(recordTime)
         setupAudio()
         //print("In view playSoundsViewController")
         //print(recordedAudioUrl)

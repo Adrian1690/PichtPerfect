@@ -12,6 +12,8 @@ import AVFoundation
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     var audioRecorder: AVAudioRecorder!
+    var audioPlayer: AVAudioPlayer!
+    var filePath: URL!
     
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var recordingButton: UIButton!
@@ -36,7 +38,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
         let recordingName = "mimimi.wav"
         let pathArray = [dirPath, recordingName]
-        let filePath = URL(string: pathArray.joined(separator: "/"))
+        filePath = URL(string: pathArray.joined(separator: "/"))
         
         //print(filePath)
         
@@ -58,6 +60,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         
         audioRecorder.stop()
         
+        try! audioPlayer = AVAudioPlayer(contentsOf: filePath!)
+        print( audioPlayer.duration)
+        
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
     }
@@ -76,7 +81,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             let playSoundsVC = segue.destination as! PlaySoundsViewController // GET VIEW CONTROLLER
             let recordedAudioURL = sender as! URL // GET URL
             playSoundsVC.recordedAudioURL = recordedAudioURL //SET URL TO VARIABLE IN playSoundsViewController
-            //playSoundsVC.recordTime =  "\(audioRecorder.duration)"
+            playSoundsVC.recordTime =  "\(audioPlayer.duration)"
         }
     }
 }

@@ -19,6 +19,9 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var reverbButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
+    @IBOutlet var durationSound: UILabel!
+    
+    
     var recordedAudioURL: URL!
     var recordTime: String!
     
@@ -56,7 +59,7 @@ class PlaySoundsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(recordTime)
+        durationSound.text = "time to record: \(recordTime)"
         setupAudio()
         //print("In view playSoundsViewController")
         //print(recordedAudioUrl)

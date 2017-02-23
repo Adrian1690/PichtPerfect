@@ -158,8 +158,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kmj-21-EuC">
                                         <rect key="frame" x="0.0" y="452.5" width="343" height="150.5"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQh-NO-Iqi" userLabel="Duration Sound Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="75"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydi-qr-Iu6" userLabel="Record Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="150.5"/>
+                                                <rect key="frame" x="0.0" y="75" width="343" height="75.5"/>
                                                 <state key="normal" image="Stop"/>
                                                 <connections>
                                                     <action selector="stopButtonPressed:" destination="XXK-3O-9LT" eventType="touchUpInside" id="N86-JD-aEl"/>
@@ -180,6 +186,7 @@
                     </view>
                     <connections>
                         <outlet property="chipmunkButton" destination="Yz3-YZ-1mz" id="S30-W0-EjY"/>
+                        <outlet property="durationSound" destination="TQh-NO-Iqi" id="r3s-x1-1Lh"/>
                         <outlet property="echoButton" destination="uBu-2U-iZ0" id="Dw5-hX-eVf"/>
                         <outlet property="rabbitButton" destination="PSA-K4-hkz" id="ccQ-Wg-2CT"/>
                         <outlet property="reverbButton" destination="M9q-4T-OJf" id="lIh-lw-0v1"/>

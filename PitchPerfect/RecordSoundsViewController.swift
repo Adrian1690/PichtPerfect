@@ -60,8 +60,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         
         audioRecorder.stop()
         
-        try! audioPlayer = AVAudioPlayer(contentsOf: filePath!)
-        print( audioPlayer.duration)
+        try! audioPlayer = AVAudioPlayer(contentsOf: filePath!) // get Audio file
+        print( audioPlayer.duration) // get duration
         
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)

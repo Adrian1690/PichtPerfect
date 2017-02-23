@@ -57,6 +57,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         recordingLabel.text = "Tap to record"
         
         audioRecorder.stop()
+        
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
     }
@@ -75,6 +76,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             let playSoundsVC = segue.destination as! PlaySoundsViewController // GET VIEW CONTROLLER
             let recordedAudioURL = sender as! URL // GET URL
             playSoundsVC.recordedAudioURL = recordedAudioURL //SET URL TO VARIABLE IN playSoundsViewController
+            //playSoundsVC.recordTime =  "\(audioRecorder.duration)"
         }
     }
 }

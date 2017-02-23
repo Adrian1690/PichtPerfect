@@ -102,7 +102,7 @@
 				TargetAttributes = {
 					889E32BB1E579BF600B422E1 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = P2PY4EE36E;
+						DevelopmentTeam = A2S8Z5742N;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -269,10 +269,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P2PY4EE36E;
+				DEVELOPMENT_TEAM = A2S8Z5742N;
 				INFOPLIST_FILE = PitchPerfect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.AvatarPucp.PitchPerfect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adrian.PitchPerfect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -282,10 +282,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P2PY4EE36E;
+				DEVELOPMENT_TEAM = A2S8Z5742N;
 				INFOPLIST_FILE = PitchPerfect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.AvatarPucp.PitchPerfect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adrian.PitchPerfect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
